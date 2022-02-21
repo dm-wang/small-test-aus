@@ -43,7 +43,7 @@ describe('deepEquals', () => {
   test('should work for objects with different order', async () => {
     expect(await asyncDeepEquals({ a: 1, b: 2 }, { b: 2, a: 1 })).toBe(true);
   });
-  
+
   describe('Incorrect comparisons', () => {
     const arbitrary: Arbitrary<any> = fc.oneof(
       fc.integer(),
